@@ -74,7 +74,7 @@ bnut_grip_len= 1.2;     // length of that ridge
 
 // ---- curved head-washer (screw mode; print 3: washer_tilt = 0 / +13 / -13) ----
 washer_od    = 9;       // washer outer diameter (M4 head ~7mm sits on it)
-washer_clr   = 4.6;     // M4 through-hole
+washer_clr   = 4.0;     // M4 through-hole (snug on the shaft so the washer self-centres)
 washer_h     = 2.5;     // min thickness at the thin edge after the convex carve
 washer_tilt  = 0;       // 0 = centre hole; +13 / -13 = the two side holes (mirror pair)
 washer_marg  = 4;       // stock above the apex, trimmed by the wall curve

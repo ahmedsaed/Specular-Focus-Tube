@@ -40,7 +40,7 @@ skirt_depth   = 7;       // how far the skirt reaches down the ring
 
 // ---- focuser mount (the sandwich) ----
 flange_od     = 60;      // flush with the skirt / bracket pad
-mount_h       = 16;      // focuser-mount-face height above the register face. The screw
+mount_h       = 19;      // focuser-mount-face height above the register face. The screw
                          // comes DOWN from the top and travels this far to the captive
                          // nut at the BOTTOM. Make it taller to swallow an over-long
                          // screw (less tip pokes past the nut into the socket). Keep it
@@ -122,8 +122,6 @@ module male() {
             difference() {
                 translate([0,0, -skirt_depth]) cylinder(d = skirt_od, h = skirt_depth);
                 translate([0,0, -skirt_depth-0.5]) cylinder(d = bay_ring_od + skirt_clear, h = skirt_depth + 0.5);
-                translate([0,0, -skirt_depth-0.01])                         // lead-in chamfer
-                    cylinder(d1 = bay_ring_od + skirt_clear + 2.5, d2 = bay_ring_od + skirt_clear, h = 1.6);
             }
             // neck extends a bit past the lip line to overlap the lugs (manifold)
             translate([0,0, -(bay_ledge_t + 0.6)]) cylinder(d = neck_d, h = bay_ledge_t + 0.62);
